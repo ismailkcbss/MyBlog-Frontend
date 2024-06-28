@@ -1,4 +1,4 @@
-import './App.css';
+import './assets/css/App.css';
 import 'antd/dist/reset.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 

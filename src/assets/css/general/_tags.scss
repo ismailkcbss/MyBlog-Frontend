@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', 'Open Sans', sans-serif;
+    font-weight: 400;
+    outline: none;
+}
+
+html {
+    font-size: 10px !important;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+i {
+    overflow: hidden;
+    vertical-align: middle;
+    font-size: 1.2rem;
+}
+
+svg {
+    vertical-align: middle;
+}
+
+input {
+    margin: 0;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    border: 0;
+    vertical-align: middle;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type=checkbox]:checked::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url(/src/assets/image/svg/tick.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        font-size: 1.6rem !important;
+    }
+}
+
+@supports (-moz-appearance:none) {
+    input[type=checkbox]:checked::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url(/src/assets/image/svg/tick.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        font-size: 1.1rem !important;
+    }
+}

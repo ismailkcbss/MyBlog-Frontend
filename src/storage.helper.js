@@ -1,7 +1,6 @@
 import Cookie from "js-cookie";
 
 
-
 export const setKeyWithValue = (key, value) => {
     localStorage.removeItem(key);
     localStorage.setItem(key, value);
