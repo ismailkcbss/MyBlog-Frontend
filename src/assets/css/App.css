@@ -2940,7 +2940,7 @@ img {
   vertical-align: middle;
   user-select: none;
   cursor: pointer;
-  background-color: rgba(149, 197, 220, 0.8);
+  background-color: #2c3e50;
 }
 .btn:hover {
   opacity: 0.8;
@@ -2972,6 +2972,89 @@ img {
 @media (min-width: 1200px) {
   .container {
     max-width: calc(126rem + 24px);
+  }
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #e6e6fa;
+}
+.navbar .navbar-content {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 70%;
+}
+.navbar .navbar-content .navbar-brand {
+  font-size: var(--spacer-5);
+  transition: all 0.1s linear;
+  padding: 1rem;
+  color: #2c3e50;
+}
+.navbar .navbar-content .navbar-menu .navbar-items {
+  display: flex;
+}
+.navbar .navbar-content .navbar-menu .navbar-items .navbar-item {
+  padding: 1rem;
+}
+.navbar .navbar-content .navbar-menu .navbar-items .navbar-item .navbar-link {
+  font-size: var(--spacer-4);
+  transition: all 0.1s linear;
+  margin-right: 1rem;
+  color: #2c3e50;
+}
+.navbar .navbar-content .navbar-menu .navbar-items .navbar-item .navbar-link:hover {
+  cursor: pointer;
+  color: #6589ad;
+}
+.navbar .navbar-login {
+  padding: 1rem;
+}
+.navbar .navbar-login .navbar-login-link {
+  font-size: var(--spacer-4);
+  transition: all 0.1s linear;
+  padding: 1rem;
+  color: #2c3e50;
+}
+.navbar .navbar-login .navbar-login-link:hover {
+  cursor: pointer;
+  color: #6589ad;
+}
+
+.navbar-toggle {
+  display: none;
+  background-color: #e6e6fa;
+}
+.navbar-toggle .navbar-toggle-button {
+  border: none;
+  transition: all 0.2s linear;
+  padding: 1rem;
+  background-color: transparent;
+  z-index: 5;
+}
+.navbar-toggle .navbar-toggle-button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.navbar-toggle .navbar-toggle-menu {
+  width: 20rem;
+  height: 100%;
+  background-color: #e6e6fa;
+  position: absolute;
+  z-index: 4;
+}
+.navbar-toggle .navbar-toggle-menu .navbar-toggle-items .navbar-toggle-item {
+  padding: 1rem;
+}
+.navbar-toggle .navbar-toggle-menu .navbar-toggle-items .navbar-toggle-item .navbar-toggle-link {
+  font-size: var(--spacer-5);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+  .navbar-toggle {
+    display: block;
   }
 }
 

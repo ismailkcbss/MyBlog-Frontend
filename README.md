@@ -48,7 +48,7 @@ $ npm run start:prod
 
 You can run the project by typing this command. In some cases, after the download is complete, you may encounter errors due to package versions. In such a situation, you can manually download according to the versions of the packages in the *package.json* file shown below
 
-![PackageJsonPNG](https://firebasestorage.googleapis.com/v0/b/shopplace-41632.appspot.com/o/Githup%2FshopplaceFrontPackage.png?alt=media&token=0d5e435f-6726-4e12-8835-4dd545625a3d&_gl=1*mpqnoh*_ga*MTc4OTQzODUwNy4xNjk0Nzk3MzI5*_ga_CW55HF8NVT*MTY5Nzg4NDU4OC4yNS4xLjE2OTc4ODc1MjMuMjQuMC4w)
+![PackageJsonPNG]
 
 An example of the command you should type in the command prompt when you are inside the project's main directory for the download process is;
 ```bash

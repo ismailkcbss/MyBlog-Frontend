@@ -1,0 +1,104 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #e6e6fa;
+
+    .navbar-content {
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 70%;
+
+        .navbar-brand {
+            font-size: var(--spacer-5);
+            transition: all .1s linear;
+            padding: 1rem;
+            color: $primary-8;
+
+        }
+
+        .navbar-menu {
+            .navbar-items {
+                display: flex;
+
+                .navbar-item {
+                    padding: 1rem;
+
+                    .navbar-link {
+                        font-size: var(--spacer-4);
+                        transition: all .1s linear;
+                        margin-right: 1rem;
+                        color: $primary-8;
+
+                        &:hover {
+                            cursor: pointer;
+                            color: $secondary-11;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-login {
+        padding: 1rem;
+
+        .navbar-login-link {
+            font-size: var(--spacer-4);
+            transition: all .1s linear;
+            padding: 1rem;
+            color: $primary-8;
+
+            &:hover {
+                cursor: pointer;
+                color: $secondary-11;
+            }
+        }
+    }
+
+}
+
+.navbar-toggle {
+    display: none;
+    background-color: #e6e6fa;
+
+    .navbar-toggle-button {
+        border: none;
+        transition: all .2s linear;
+        padding: 1rem;
+        background-color: transparent;
+        z-index: 5;
+        &:hover {
+            cursor: pointer;
+            opacity: .8;
+        }
+    }
+
+    .navbar-toggle-menu {
+        width: 20rem;
+        height: 100%;
+        background-color: #e6e6fa;
+        position: absolute;
+        z-index: 4;
+        .navbar-toggle-items {
+            .navbar-toggle-item {
+                padding: 1rem;
+                .navbar-toggle-link {
+                    font-size: var(--spacer-5);
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .navbar {
+        display: none;
+    }
+
+    .navbar-toggle {
+        display: block;
+
+    }
+
+}
