@@ -1,8 +1,19 @@
 import React from 'react'
 
 export default function Navbar() {
+
+    const openToggleMenu = () => {
+        document.querySelector('#toggle-menu').classList.toggle('active');
+        document.querySelector('#touch-close').classList.toggle('active');
+    }
+    const TouchClose = () => {
+        document.querySelector('#toggle-menu').classList.remove('active');
+        document.querySelector('#touch-close').classList.remove('active');
+    }
+
+
     return (
-        <div style={{height:"2000px"}}>
+        <div>
             <div className="navbar">
                 <nav className='navbar-content'>
                     <div title="MyBlog" className="navbar-brand">
@@ -29,10 +40,10 @@ export default function Navbar() {
             </div>
 
             <div className='navbar-toggle'>
-                <button title='Menu' className='navbar-toggle-button'>
+                <button title='Menu' className='navbar-toggle-button' onClick={openToggleMenu}>
                     <svg xmlns="http://www.w3.org/2000/svg" height="20" width="17.5" viewBox="0 0 448 512"><path fill="#6589ad" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" /></svg>
                 </button>
-                <div className='navbar-toggle-menu'>
+                <div id='toggle-menu' className='navbar-toggle-menu'>
                         <ul className="navbar-toggle-items">
                             <li className="navbar-toggle-item">
                                 <a title="Home" className='navbar-toggle-link' href="/">Home</a>
@@ -46,6 +57,7 @@ export default function Navbar() {
                         </ul>
                 </div>
             </div>
+            <div id='touch-close' className='navbar-toggle-touch-close' onClick={TouchClose}></div>
         </div>
 
     )

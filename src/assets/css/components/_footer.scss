@@ -1,0 +1,108 @@
+.footer {
+
+    .footer-container {
+        width: 100%;
+        min-height: 20rem;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: $secondary-12;
+        padding: 1rem;
+
+        .about-container {
+            order: 1;
+            display: flex;
+            justify-content: space-around;
+            flex-basis: 30%;
+
+            .project-content {
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .help-content {
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .__title {
+                color: $secondary-3;
+                font-weight: bold;
+                margin-bottom: 1rem;
+            }
+
+            .__item {
+                font-size: 1.4rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .social-container {
+            order: 2;
+            flex-basis: 15%;
+
+            .__social-items {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .__social-item {
+                    text-align: start;
+                    padding: 1rem;
+
+                    .__social-item-link {}
+
+                    .__social-item-link-label {
+                        padding: .5rem;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+            .__title {
+                color: $secondary-3;
+                font-weight: bold;
+            }
+        }
+
+        .address-container {
+            order: 3;
+            flex-basis: 25%;
+
+            .__title {
+                color: $secondary-3;
+                font-weight: bold;
+                margin-bottom: 1rem;
+            }
+
+            .address-container__items {
+                .address-container__item {
+                    margin-bottom: 1rem;
+                    label {
+                        color: $secondary-9;
+                        font-weight: bold;
+                        font-size: 1.3rem;
+                    }
+                }
+                .address-container__content{
+                    font-size: 1.3rem;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+    }
+
+    .copyright-container {
+        width: 100%;
+        min-height: 1.8rem;
+        line-height: 1.8rem;
+        background-color: $secondary-2;
+        text-align: center;
+
+        .copyright-content {
+            font-weight: bold;
+        }
+    }
+}

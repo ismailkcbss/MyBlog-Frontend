@@ -1,18 +1,19 @@
 import './assets/css/App.css';
-import 'antd/dist/reset.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Home from './components/Home';
-import Navbar from './components/Navbar';
+import Home from './components/home';
+import Navbar from './components/navbar';
+import Footer from './components/footer';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Navbar />
+        <Navbar />
         <Switch>
           <Route exact path='/' component={Home} />
         </Switch>
+        <Footer />
       </BrowserRouter>
     </div>
   );

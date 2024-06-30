@@ -1,7 +1,7 @@
 .navbar {
     display: flex;
     justify-content: space-around;
-    background-color: #e6e6fa;
+    background-color: $secondary-12;
 
     .navbar-content {
         display: flex;
@@ -59,14 +59,15 @@
 
 .navbar-toggle {
     display: none;
-    background-color: #e6e6fa;
+    background-color: $secondary-12;
+    border-bottom: 1px solid rgba(207, 207, 207, 0.603);
 
     .navbar-toggle-button {
         border: none;
         transition: all .2s linear;
         padding: 1rem;
         background-color: transparent;
-        z-index: 5;
+
         &:hover {
             cursor: pointer;
             opacity: .8;
@@ -74,22 +75,51 @@
     }
 
     .navbar-toggle-menu {
-        width: 20rem;
+        display: none;
         height: 100%;
-        background-color: #e6e6fa;
-        position: absolute;
+        background-color: $secondary-12;
         z-index: 4;
+        transition: all .2s linear;
+
         .navbar-toggle-items {
+            text-align: center;
+
             .navbar-toggle-item {
                 padding: 1rem;
+                transition: all .2s linear;
+                border-bottom: .1rem solid $secondary-14;
+
                 .navbar-toggle-link {
+                    display: block;
                     font-size: var(--spacer-5);
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: $secondary-13;
                 }
             }
         }
+
+        &.active {
+            display: block;
+        }
+
     }
 }
 
+.navbar-toggle-touch-close {
+    display: none;
+
+    &.active {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        background-color: rgba(224, 222, 222, 0.37);
+    }
+}
 
 @media screen and (max-width:768px) {
     .navbar {
@@ -98,7 +128,15 @@
 
     .navbar-toggle {
         display: block;
+    }
 
+}
+
+@media screen and (min-width:768px) {
+    .navbar-toggle-touch-close {
+        &.active {
+            display: none;
+        }
     }
 
 }
