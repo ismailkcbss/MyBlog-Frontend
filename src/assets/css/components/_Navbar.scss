@@ -61,6 +61,7 @@
     display: none;
     background-color: $secondary-12;
     border-bottom: 1px solid rgba(207, 207, 207, 0.603);
+    position: relative;
 
     .navbar-toggle-button {
         border: none;
@@ -80,6 +81,8 @@
         background-color: $secondary-12;
         z-index: 4;
         transition: all .2s linear;
+        position: absolute;
+        width: 100%;
 
         .navbar-toggle-items {
             text-align: center;
@@ -88,7 +91,7 @@
                 padding: 1rem;
                 transition: all .2s linear;
                 border-bottom: .1rem solid $secondary-14;
-
+                background-color: $secondary-12;
                 .navbar-toggle-link {
                     display: block;
                     font-size: var(--spacer-5);

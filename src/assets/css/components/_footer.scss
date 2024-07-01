@@ -30,44 +30,60 @@
                 color: $secondary-3;
                 font-weight: bold;
                 margin-bottom: 1rem;
+                text-align: center;
             }
 
             .__item {
                 font-size: 1.4rem;
                 margin-bottom: 1rem;
+                color: $primary-8;
+                transition: all .2s linear;
+
+                &:hover {
+                    color: $secondary-11;
+                }
             }
         }
 
         .social-container {
-            order: 2;
+            order: 3;
             flex-basis: 15%;
 
             .__social-items {
                 display: flex;
-                flex-direction: column;
-                justify-content: space-between;
+                justify-content: space-evenly;
 
                 .__social-item {
                     text-align: start;
                     padding: 1rem;
 
-                    .__social-item-link {}
+                    .__social-item-link {
+                        transition: transform 0.3s ease, height 0.3s ease, width 0.3s ease;
 
-                    .__social-item-link-label {
-                        padding: .5rem;
-                        font-size: 1.2rem;
+                        &:hover {
+                            svg {
+                                transform: translateY(-5px) scale(1.1);
+                            }
+                        }
+
+                        svg {
+                            transition: transform 0.3s ease, height 0.3s ease, width 0.3s ease;
+                        }
                     }
+
                 }
             }
 
             .__title {
                 color: $secondary-3;
                 font-weight: bold;
+                text-align: center;
+
             }
         }
 
         .address-container {
-            order: 3;
+            order: 2;
             flex-basis: 25%;
 
             .__title {
@@ -79,13 +95,16 @@
             .address-container__items {
                 .address-container__item {
                     margin-bottom: 1rem;
+
                     label {
                         color: $secondary-9;
                         font-weight: bold;
                         font-size: 1.3rem;
+                        padding-left: 1rem;
                     }
                 }
-                .address-container__content{
+
+                .address-container__content {
                     font-size: 1.3rem;
                     margin-bottom: 2rem;
                 }
@@ -99,10 +118,92 @@
         min-height: 1.8rem;
         line-height: 1.8rem;
         background-color: $secondary-2;
-        text-align: center;
+        text-align: end;
+        padding-right: 1rem;
 
         .copyright-content {
             font-weight: bold;
         }
     }
+
+
+    @media screen and (max-width:768px) {
+        .footer-container {
+            flex-direction: column;
+
+            .about-container {
+                flex-direction: column;
+                margin-bottom: 2rem;
+
+                .__title {
+                    text-align: start;
+                    padding: 2rem;
+                    border: .2rem solid $primary-11;
+                    position: relative;
+                    transition: .2s linear all;
+                    cursor: pointer;
+
+                    &::after {
+                        content: "";
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        display: inline-block;
+                        background-repeat: no-repeat;
+                        background-position: 50% 50%;
+                        background-size: contain;
+                        transition: transform .2s linear;
+                        position: absolute;
+                        top: 50%;
+                        right: 1rem;
+                        transform: translateY(-50%);
+                        background-image: url('../../assets/image/svg/filter-plus.svg');
+                    }
+
+                    &.rotate {
+                        &::after {
+                            transform: translateY(-50%) rotate(-180deg);
+                            transform-origin: center center;
+                            background-image: url('../../assets/image/svg/filter-minus.svg');
+                        }
+                    }
+
+                }
+
+                .__item {
+                    transition: all .2s linear;
+                    display: none;
+                    padding: 1rem;
+                    border-bottom: .1rem solid $primary-11;
+
+                    &.active {
+                        display: block;
+                    }
+                }
+            }
+
+            .address-container {
+                margin-bottom: 2rem;
+
+                .__title {
+                    text-align: center;
+                }
+
+                .address-container__items {
+                    border: .2rem solid $primary-12;
+                    margin-bottom: 1rem;
+                    padding: 2rem;
+                    text-align: center;
+                }
+            }
+
+            .social-container {
+                margin-bottom: 2rem;
+            }
+
+
+
+
+        }
+    }
+
 }
