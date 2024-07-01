@@ -1,0 +1,73 @@
+.login_container {
+    position: relative;
+    .login_form {
+        width: max-content;
+        padding: 3rem;
+        border-radius: .4rem;
+        box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.1), 0 .1rem .3rem rgba(0, 0, 0, 0.08);
+
+        .login_header {
+            h2{
+                font-size: var(--font-size-20);
+                font-weight: bold;
+                margin-bottom: 1rem;
+                color: $primary-12;
+            }
+            p{
+                font-size: var(--font-size-12);
+                color: $secondary-3;
+            }
+        }
+
+        .login_main {
+            .login_main-input {
+                margin-bottom: 2rem;
+                margin-top: 2rem;
+                display: flex;
+                flex-direction: column;
+
+                .login-input {
+                    width: 35rem;
+                    height: 4.2rem;
+                    font-size: var(--font-size-13);
+                    padding: 1rem;
+                    border-radius: .4rem;
+                    transition: all .2s linear;
+                    border: none;
+                    box-shadow: .1rem .1rem .1rem .2rem rgba(0, 0, 0, 0.08);
+                }
+
+                .login-span {
+                    padding: .5rem;
+                    font-size: var(--font-size-11);
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .login_main {
+        .login_main-input {
+
+            .login-input {
+                width: 30rem !important;
+                height: 3.5rem;
+            }
+        }
+    }
+}
+
+input.validate-error,
+textarea.validate-error,
+select.validate-error {
+    border: .1rem solid $secondary-6 !important;
+}
+
+span {
+    &.validate-error {
+        color: $secondary-6 !important;
+
+    }
+}

@@ -18,13 +18,13 @@ export default function Footer() {
                 <div className='about-container'>
                     <div className='project-content'>
                         <h2 title='About' className={`__title ${activeSection === 'About' ? 'rotate' : ''}`} onClick={openDropDown}>About</h2>
-                        <a id='item-about' className={`__item ${activeSection === 'About' ? 'active' : ''}`} title='About Us'>About Us</a>
-                        <a id='item-projects' className={`__item ${activeSection === 'About' ? 'active' : ''}`} title='Projects'>Projects</a>
+                        <a id='item-about' href='/About' className={`__item ${activeSection === 'About' ? 'active' : ''}`} title='About Us'>About Us</a>
+                        <a id='item-projects' href='/About' className={`__item ${activeSection === 'About' ? 'active' : ''}`} title='Projects'>Projects</a>
                     </div>
                     <div className='help-content' onClick={openDropDown}>
                         <h2 title='Help' className={`__title ${activeSection === 'Help' ? 'rotate' : ''}`}>Help</h2>
-                        <a id='item-support' className={`__item ${activeSection === 'Help' ? 'active' : ''}`} title='Support'>Support</a>
-                        <a id='item-contact' className={`__item ${activeSection === 'Help' ? 'active' : ''}`} title='Contact Us'>Contact Us</a>
+                        <a id='item-support'  href='/ContactUs' className={`__item ${activeSection === 'Help' ? 'active' : ''}`} title='Support'>Support</a>
+                        <a id='item-contact' href='/ContactUs' className={`__item ${activeSection === 'Help' ? 'active' : ''}`} title='Contact Us'>Contact Us</a>
 
                     </div>
                 </div>
@@ -39,27 +39,24 @@ export default function Footer() {
                         <div title='Huzurevleri Mahallesi No:528/1 Çukurova Adana' className='address-container__content'>
                             Huzurevleri Mahallesi No:528/1 Çukurova Adana
                         </div>
-
                     </div>
                     <div className='address-container__items'>
                         <div title='Phone' className='address-container__item'>
                             <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512"><path fill="#B197FC" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" /></svg>
                             <label>Phone</label>
                         </div>
-                        <div className='address-container__content'>
+                        <div title='+90 507 123 45 67' className='address-container__content'>
                             +90 507 123 45 67
                         </div>
-
                     </div>
                     <div className='address-container__items'>
                         <div title='Email' className='address-container__item'>
                             <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512"><path fill="#B197FC" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" /></svg>
                             <label>Email</label>
                         </div>
-                        <div className='address-container__content'>
+                        <div title='ismailcankocabas@gmail.com' className='address-container__content'>
                             ismailcankocabas@gmail.com
                         </div>
-
                     </div>
                 </div>
 

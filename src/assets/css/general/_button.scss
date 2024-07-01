@@ -11,9 +11,20 @@
     vertical-align: middle;
     user-select: none;
     cursor: pointer;
-    background-color: $primary-8;
+}
 
-    &:hover {
-        opacity: .8;
-    }
+.btn--block {
+    display: block;
+    width: 100%;
+}
+
+.btn--primary {
+    color: $secondary-1 !important;
+    background-color: $primary-12 !important;
+    font-size: var(--font-size-14);
+}
+
+.btn[disabled] {
+    pointer-events: none;
+	opacity: .5;
 }
